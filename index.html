@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test MyCard Component</title>
+</head>
+<body>
+    <h1>Test MyCard Component</h1>
+    <my-card>
+        <img slot="image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+        <h1 slot="title">Título del Post</h1>
+        <h2 slot="subtitle">Subtítulo del Post</h2>
+        <p slot="content">
+            Aquí va el contenido del post. Puede ser un texto largo que describa el contenido de la tarjeta.
+        </p>
+        <my-button slot="button" id="testButton" background-color="#28a745" font-size="18px">
+            Click Me!
+        </my-button>
+    </my-card>
+
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
