@@ -9,10 +9,16 @@ class MyCard extends HTMLElement {
     }
 
     render() {
+        const imagePosition = this.getAttribute('image-position') || 'right';
+        const backgroundColor = this.getAttribute('background-color') || '#fff';
+        const hideButton = this.hasAttribute('hide-button');
+        const imageOrderClass = imagePosition === 'left' ? 'order-left' : 'order-right';
+
         this.shadowRoot.innerHTML = `
             <style>
                 .card {
                     display: flex;
+                    flex-direction: row;
                     border: 1px solid #ddd;
                     border-radius: 8px;
                     overflow: hidden;
@@ -37,6 +43,7 @@ class MyCard extends HTMLElement {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    background-color: ${backgroundColor};
                 }
                 .card .content h1 {
                     margin-top: 0;
@@ -65,16 +72,23 @@ class MyCard extends HTMLElement {
                 .card .content button:hover {
                     background-color: #0056b3;
                 }
+                /* Estilos para cambiar el orden de los elementos */
+                .order-left {
+                    order: 0;
+                }
+                .order-right {
+                    order: 1;
+                }
             </style>
             <div class="card">
-                <div class="image">
+                <div class="image ${imageOrderClass}">
                     <slot name="image"></slot>
                 </div>
                 <div class="content">
                     <slot name="title"></slot>
                     <slot name="subtitle"></slot>
                     <slot name="content"></slot>
-                    <slot name="button"></slot>
+                    ${!hideButton ? '<slot name="button"></slot>' : ''}
                 </div>
             </div>
         `;
