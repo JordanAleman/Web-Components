@@ -1,35 +1,32 @@
 {
-  "name": "my-web-component",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+	"name": "test",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack",
+		"start": "webpack serve",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@storybook/web-components": "^8.2.8"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^1.6.1",
-    "@storybook/addon-essentials": "^8.2.8",
-    "@storybook/addon-links": "^8.2.8",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/blocks": "^8.2.8",
-    "@storybook/test": "^8.2.8",
-    "@storybook/web-components-webpack5": "^8.2.8",
-    "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.0",
-    "lit": "^3.2.0",
-    "storybook": "^8.2.8",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-config": "^7.5.0",
-    "webpack-dev-server": "^5.0.4"
-  }
+		"build-storybook": "build-storybook"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@storybook/web-components": "^8.2.8"
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "^1.6.1",
+		"@storybook/addon-essentials": "^8.2.8",
+		"@storybook/addon-links": "^8.2.8",
+		"@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+		"@storybook/blocks": "^8.2.8",
+		"@storybook/test": "^8.2.8",
+		"@storybook/web-components-webpack5": "^8.2.8",
+		"lit": "^3.2.0",
+		"storybook": "^8.2.8",
+		"webpack": "^5.93.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.4"
+	}
 }

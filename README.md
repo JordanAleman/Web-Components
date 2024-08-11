@@ -43,7 +43,7 @@ npx sb init --type web_components
 ```
 Esto creará una configuración básica de Storybook en tu proyecto.
 
-<br>
+<br> 
 
 # 3. Instalar Webpack
 
@@ -76,6 +76,7 @@ npm install --save-dev webpack webpack-cli webpack-dev-server
 - **Uso**: Es útil durante el desarrollo para servir tu aplicación y proporcionar una experiencia de desarrollo más fluida.
 
 <br>
+<!-- <br><br><br><br><br><br><br><br> -->
 
 # 4. Configuración de Webpack
 
@@ -86,12 +87,12 @@ Crea un archivo de configuración de Webpack en la raíz de tu proyecto llamado 
 const path = require('path');
 
 module.exports = {
-  entry: './stories/Components/index.js',  // Punto de entrada principal de tu aplicación
+  entry: './stories/Components/index.js',  
   output: {
-    filename: 'bundle.js',  // Archivo resultante de la minificación
-    path: path.resolve(__dirname, 'dist'),  // Carpeta de salida
+    filename: 'bundle.js', 
+    path: path.resolve(__dirname, 'dist'),  
   },
-  mode: 'production',  // Modo de producción para minificar
+  mode: 'production', 
 };
 ```
 Este archivo configura Webpack para empaquetar tu código en un archivo bundle.js en la carpeta dist.
@@ -120,19 +121,20 @@ Agrega los siguientes scripts a tu `package.json` para ejecutar Webpack y Storyb
 ```
 
 <br>
+<!-- <br><br> -->
 
 # 7. Crear Estructura de Archivos
 
 Crea las siguientes carpetas y archivos para organizar tu proyecto:
 
 ```bash
-mkdir stories
 mkdir dist
 mkdir stories/Components
 touch stories/Components/index.js
-touch stories/Components/my-component.js
+touch stories/Components/MyFirstComponent/MyFirstComponent.js
+
 ```
-Puedes colocar tus Web Components en stories/Components/my-component.js y tu punto de entrada principal en stories/Components/index.js.
+Puedes colocar tus Web Components en stories/Components/ y tu punto de entrada principal en stories/Components/index.js.
 
 <br>
 
