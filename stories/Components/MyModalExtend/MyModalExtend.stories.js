@@ -86,7 +86,43 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
     modalSize: 'medium',
-    open: false,
+    open: true,
+    hideConfirmButton: false,
+    hideCloseButton: false,
+    content: '¿Estás seguro de que deseas continuar?',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+    modalSize: 'small',
+    open: true,
+    hideConfirmButton: false,
+    hideCloseButton: false,
+    content: '¿Estás seguro de que deseas continuar?',
+};
+
+export const ExtraSmall = Template.bind({});
+ExtraSmall.args = {
+    modalSize: 'extra_small',
+    open: true,
+    hideConfirmButton: false,
+    hideCloseButton: false,
+    content: '¿Estás seguro de que deseas continuar?',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+    modalSize: 'large',
+    open: true,
+    hideConfirmButton: false,
+    hideCloseButton: false,
+    content: '¿Estás seguro de que deseas continuar?',
+};
+
+export const ExtraLarge = Template.bind({});
+ExtraLarge.args = {
+    modalSize: 'extra_large',
+    open: true,
     hideConfirmButton: false,
     hideCloseButton: false,
     content: '¿Estás seguro de que deseas continuar?',
