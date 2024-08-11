@@ -1,4 +1,4 @@
-class MyCard extends HTMLElement {
+export class MyCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });

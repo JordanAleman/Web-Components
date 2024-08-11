@@ -1,7 +1,7 @@
 import './MyButton.js';
 
 export default {
-  title: 'Example/MyButton',
+  title: 'Components/MyButton',
   component: 'my-button',
   tags: ['autodocs'],
   parameters: {

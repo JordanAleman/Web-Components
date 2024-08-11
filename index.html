@@ -7,8 +7,9 @@
 </head>
 <body>
     <h1>Test MyCard Component</h1>
-    <my-card>
+    <my-card-extend image-position="right" background-color="#fff" hide-image="">
         <img slot="image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+        <span slot="category-label">Categoría</span>
         <h1 slot="title">Título del Post</h1>
         <h2 slot="subtitle">Subtítulo del Post</h2>
         <p slot="content">
@@ -17,7 +18,7 @@
         <my-button slot="button" id="testButton" background-color="#28a745" font-size="18px">
             Click Me!
         </my-button>
-    </my-card>
+    </my-card-extend>
 
     <script src="dist/bundle.js"></script>
 </body>
