@@ -1,45 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test MyCard Component</title>
-</head>
-<body>
-    <h1>Test MyCard Component</h1>
-    <my-card-extend image-position="right" background-color="#fff" hide-image="">
-        <img slot="image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
-        <span slot="category-label">Categoría</span>
-        <h1 slot="title">Título del Post</h1>
-        <h2 slot="subtitle">Subtítulo del Post</h2>
-        <p slot="content">
-            Aquí va el contenido del post. Puede ser un texto largo que describa el contenido de la tarjeta.
-        </p>
-        <my-button slot="button" id="testButton" background-color="#28a745" font-size="18px">
-            Click Me!
-        </my-button>
-    </my-card-extend>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Test MyCard Component</title>
+	</head>
+	<body>
+		<h1>Test MyCard Component</h1>
+		<my-card-extend
+			image-position="right"
+			background-color="#fff"
+			hide-image=""
+		>
+			<img
+				slot="image"
+				src="https://via.placeholder.com/400x300"
+				alt="Placeholder Image"
+			/>
+			<span slot="category-label">Categoría</span>
+			<h1 slot="title">Título del Post</h1>
+			<h2 slot="subtitle">Subtítulo del Post</h2>
+			<p slot="content">
+				Aquí va el contenido del post. Puede ser un texto largo que
+				describa el contenido de la tarjeta.
+			</p>
+			<my-button
+				slot="button"
+				id="testButton"
+				background-color="#28a745"
+				font-size="18px"
+			>
+				Click Me!
+			</my-button>
+		</my-card-extend>
 
-    <!-- Aquí añadimos el modal -->
-    <my-modal id="myModal">
-        <div slot="content">
-            Este es el contenido del modal.
-        </div>
-    </my-modal>
+		<!-- Aquí añadimos el modal -->
+		<my-modal-extend id="myModal" modalsize="large">
+			<div slot="content">Este es el contenido del modal.</div>
+		</my-modal-extend>
 
-    <script src="dist/bundle.js"></script>
+		<script src="dist/bundle.js"></script>
 
-    <script>
-        // Esperar a que el DOM esté completamente cargado
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('testButton');
-            const modal = document.getElementById('myModal');
+		<script>
+			// Esperar a que el DOM esté completamente cargado
+			document.addEventListener("DOMContentLoaded", () => {
+				const button = document.getElementById("testButton");
+				const modal = document.getElementById("myModal");
 
-            // Agregar el evento de clic al botón
-            button.addEventListener('click', () => {
-                modal.setAttribute('open', '');
-            });
-        });
-    </script>
-</body>
+				// Agregar el evento de clic al botón
+				button.addEventListener("click", () => {
+					modal.setAttribute("open", "");
+				});
+			});
+		</script>
+	</body>
 </html>

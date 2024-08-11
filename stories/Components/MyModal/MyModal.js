@@ -1,4 +1,4 @@
-class MyModal extends HTMLElement {
+export class MyModal extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -19,15 +19,29 @@ class MyModal extends HTMLElement {
         const confirmButton = this.shadowRoot.querySelector('.confirm-button');
         const closeModalButton = this.shadowRoot.querySelector('.close-modal-button');
         const backdrop = this.shadowRoot.querySelector('.backdrop');
-
+        const modalElement = this.shadowRoot.querySelector('.modal');
+        const slots = this.shadowRoot.querySelectorAll('slot');  // Selecciona todos los slots
+    
         const method = action === 'add' ? 'addEventListener' : 'removeEventListener';
-
+    
         closeButton[method]('click', this.closeModal.bind(this));
         if (confirmButton) confirmButton[method]('click', this.confirmAction.bind(this));
         closeModalButton[method]('click', this.closeModal.bind(this));
-        backdrop[method]('click', this.closeModal.bind(this));
+    
+        // Adjust the backdrop click event to check if the click is outside the modal and the slot content
+        backdrop[method]('click', (event) => {
+            // Verificar si el clic fue dentro del modal o en alguno de los nodos asignados a cualquier slot
+            const isClickInsideModal = modalElement.contains(event.target);
+            const isClickInsideAnySlot = Array.from(slots).some(slot => 
+                slot.assignedNodes().some(node => node.contains(event.target))
+            );
+    
+            if (!isClickInsideModal && !isClickInsideAnySlot) {
+                this.closeModal();
+            }
+        });
     }
-
+   
     closeModal() {
         this.removeAttribute('open');
     }

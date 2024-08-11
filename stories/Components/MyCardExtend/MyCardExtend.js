@@ -27,7 +27,11 @@ class MyCardExtend extends MyCard {
         `;
 
         const contentSlot = this.shadowRoot.querySelector('.content');
-        contentSlot.insertAdjacentHTML('afterbegin', `<slot name="category-label"></slot>`);
+        contentSlot.insertAdjacentHTML('afterbegin', `
+            <div class="category-label">
+                <slot name="category-label"></slot>
+            </div> 
+            `);
 
     }
 }
