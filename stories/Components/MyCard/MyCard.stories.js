@@ -1,7 +1,7 @@
 import './MyCard.js';
 
 export default {
-  title: 'Example/MyCard',
+  title: 'Components/MyCard',
   component: 'my-card',
   tags: ['autodocs'],
   parameters: {

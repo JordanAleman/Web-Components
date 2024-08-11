@@ -20,6 +20,26 @@
         </my-button>
     </my-card-extend>
 
+    <!-- Aquí añadimos el modal -->
+    <my-modal id="myModal">
+        <div slot="content">
+            Este es el contenido del modal.
+        </div>
+    </my-modal>
+
     <script src="dist/bundle.js"></script>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('testButton');
+            const modal = document.getElementById('myModal');
+
+            // Agregar el evento de clic al botón
+            button.addEventListener('click', () => {
+                modal.setAttribute('open', '');
+            });
+        });
+    </script>
 </body>
 </html>
