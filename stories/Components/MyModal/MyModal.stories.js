@@ -55,10 +55,10 @@ const Template = (args) => {
     const openModalButton = container.querySelector('#openModalButton');
 
     if (args.hideConfirmButton) {
-        modal.setAttribute('hideConfirmButton', '');
+        modal.toggleAttribute('hideConfirmButton', args.hideConfirmButton);
     }
     if (args.hideCloseButton) {
-        modal.setAttribute('hideCloseButton', '');
+        modal.toggleAttribute('hideCloseButtonv', args.hideCloseButton);
     }
 
     // Controlar la visibilidad inicial del modal

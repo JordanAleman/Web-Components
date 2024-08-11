@@ -119,8 +119,8 @@ class MyModal extends HTMLElement {
                         <slot name="content">Contenido del modal</slot>
                     </div>
                     <div class="modal-footer">
-                        ${hideConfirmButton ? '' : '<button class="confirm-button">Confirmar</button>'}
-                        ${hideCloseButton ? '' : '<button class="close-modal-button">Cerrar</button>'}
+                        ${!hideConfirmButton ? '<button class="confirm-button">Confirmar</button>' : ''}
+                        ${!hideCloseButton ? '<button class="close-modal-button">Cerrar</button>' : ''}
                     </div>
                 </div>
             </div>

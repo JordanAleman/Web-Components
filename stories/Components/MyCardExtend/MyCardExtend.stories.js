@@ -55,15 +55,15 @@ const Template = (args) => {
 
 
     card.innerHTML = `
-    <img slot="image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
-    <span slot="category-label">${args.categoryLabel}</span>
-    <h1 slot="title">Título del Post</h1>
-    <h2 slot="subtitle">Subtítulo del Post</h2>
-    <p slot="content">
-      Aquí va el contenido del post. Puede ser un texto largo que describa el contenido de la tarjeta.
-    </p>
-    ${!args.hideButton ? '<button slot="button">Leer Más</button>' : ''}
-  `;
+        <img slot="image" src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+        <span slot="category-label">${args.categoryLabel}</span>
+        <h1 slot="title">Título del Post</h1>
+        <h2 slot="subtitle">Subtítulo del Post</h2>
+        <p slot="content">
+        Aquí va el contenido del post. Puede ser un texto largo que describa el contenido de la tarjeta.
+        </p>
+        ${!args.hideButton ? '<button slot="button">Leer Más</button>' : ''}
+    `;
 
     return card;
 };
